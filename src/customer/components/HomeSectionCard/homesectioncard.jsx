@@ -1,4 +1,4 @@
-export const HomeSectionCard=()=>
+export const HomeSectionCard=({product})=>
 {
     return (
         <div className="cursor-pointer flex flex-col items-center bg-white rounded-lg
@@ -6,14 +6,14 @@ export const HomeSectionCard=()=>
 
         <div className="h-[13rem] w-[10rem]">
             <img className="object-cover object-top w-full h-full" 
-            src="https://thenmozhidesigns.com/cdn/shop/files/091A6888.jpg?v=17235228384"
+            src={product.imageUrl}
             alt=""/>
         </div>
 
-        <div className="p-4">
+        <div className="relative px-4 lg:px-8">
 
-            <h3 className="text-lg font-medium text-grey-900">Kurta</h3>
-            <p className="mt-2 text-sm text-gray-500">Mens Solid Pure Cotton Kurta</p>
+            <h3 className="text-lg font-medium text-grey-900 p-2">{product.brand}</h3>
+            <p className="text-sm text-gray-500">{product.title}</p>
 
         </div>
 
